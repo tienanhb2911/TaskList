@@ -25,7 +25,7 @@
                                         <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eT0-VT-vqy" id="mNv-LX-OAf">
-                                            <frame key="frameInset" width="375" height="43"/>
+                                            <frame key="frameInset" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBz-rq-Dir">
@@ -53,7 +53,13 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nzc-N1-fVL" secondAttribute="bottom" id="RYq-LN-M02"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="To Do List" id="P4h-e0-Zh7"/>
+                    <navigationItem key="navigationItem" title="To Do List" id="P4h-e0-Zh7">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Dv6-dR-lFU">
+                            <connections>
+                                <action selector="moveToAddNewItem:" destination="BYZ-38-t0r" id="SnF-LB-cAL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="nzc-N1-fVL" id="ydq-Nc-KKl"/>
                     </connections>
@@ -61,6 +67,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1079.2" y="137.18140929535232"/>
+        </scene>
+        <!--Add New-->
+        <scene sceneID="DPf-Js-Mg3">
+            <objects>
+                <viewController storyboardIdentifier="addNewVC" id="unl-bf-79b" customClass="AddNewViewController" customModule="TaskList" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X1o-8m-lE1"/>
+                        <viewControllerLayoutGuide type="bottom" id="GcF-4i-jyN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="93R-WC-pX1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a2l-zs-GuI">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAY-uF-sbN">
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="wNx-ew-skZ"/>
+                                </constraints>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="AddNewItem:" destination="unl-bf-79b" eventType="touchUpInside" id="Nyy-HB-4Xl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="a2l-zs-GuI" secondAttribute="trailing" constant="24" id="GpC-JV-9b0"/>
+                            <constraint firstItem="a2l-zs-GuI" firstAttribute="leading" secondItem="93R-WC-pX1" secondAttribute="leading" constant="24" id="VpW-uL-Egn"/>
+                            <constraint firstItem="eAY-uF-sbN" firstAttribute="top" secondItem="a2l-zs-GuI" secondAttribute="bottom" constant="8" id="XUC-VU-kSd"/>
+                            <constraint firstItem="eAY-uF-sbN" firstAttribute="centerX" secondItem="93R-WC-pX1" secondAttribute="centerX" id="q3Y-hu-OgT"/>
+                            <constraint firstItem="a2l-zs-GuI" firstAttribute="top" secondItem="X1o-8m-lE1" secondAttribute="bottom" constant="24" id="t1A-1s-hSz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add New" id="791-Ko-sdU"/>
+                    <connections>
+                        <outlet property="NewItemTxt" destination="a2l-zs-GuI" id="81Q-jK-ZcG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nfY-Ew-M91" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1749.5999999999999" y="136.28185907046478"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="D3L-jt-TOu">

@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     
     var toDoList:[ToDo] = [ToDo.init(name: "Di cho", isCompleted: false),
                            ToDo.init(name: "Di cho 1", isCompleted: false),
-                           ToDo.init(name: "Di cho 2", isCompleted: false),
+                           ToDo.init(name: "Di cho 2", isCompleted: true),
                            ToDo.init(name: "Di cho 3", isCompleted: false),
                            ToDo.init(name: "Di cho 4", isCompleted: false),
                            ToDo.init(name: "Di cho 5", isCompleted: false),
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
                            ToDo.init(name: "Di choi", isCompleted: false),
                            ToDo.init(name: "Di choi 1", isCompleted: false),
                            ToDo.init(name: "Di choi 2", isCompleted: false),
-                           ToDo.init(name: "Di choi 3", isCompleted: false),
+                           ToDo.init(name: "Di choi 3", isCompleted: true),
                            ToDo.init(name: "Di choi 4", isCompleted: false),
                            ToDo.init(name: "Di choi 5", isCompleted: false),
                            ToDo.init(name: "Di choi 6", isCompleted: false),
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
                            ToDo.init(name: "Di an 1", isCompleted: false),
                            ToDo.init(name: "Di an 2", isCompleted: false),
                            ToDo.init(name: "Di an 3", isCompleted: false),
-                           ToDo.init(name: "Di an 4", isCompleted: false),
+                           ToDo.init(name: "Di an 4", isCompleted: true),
                            ToDo.init(name: "Di an 5", isCompleted: false),
                            ToDo.init(name: "Di an 6", isCompleted: false),
                            ToDo.init(name: "Di an 7", isCompleted: false),
@@ -49,6 +49,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         tableView.dataSource = self
+        tableView.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,6 +57,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func moveToAddNewItem(_ sender: AnyObject) {
+        let VC = self.storyboard?.instantiateViewController(withIdentifier: "addNewVC") as! AddNewViewController
+        VC.delegate = self
+        self.navigationController?.pushViewController(VC, animated: true)
+        
+    }
 
 }
 
@@ -71,8 +78,35 @@ extension ViewController : UITableViewDataSource {
         let toDo = toDoList[indexPath.row]
         let label = cell.viewWithTag(100) as! UILabel
         label.text = toDo.name
-        
+        if toDo.isCompleted {
+            cell.accessoryType = .checkmark
+        }else
+        {
+            cell.accessoryType = .none
+        }
         return cell
     }
-    
+}
+
+extension ViewController : UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var toDo = toDoList[indexPath.row]
+        if toDo.isCompleted{
+            toDo.isCompleted = false
+        }else{
+            toDo.isCompleted = true
+        }
+        
+        toDoList[indexPath.row] = toDo
+        
+        self.tableView.reloadRows(at: [indexPath], with: .none)
+    }
+}
+
+extension ViewController : AddNewItemDelegate{
+    func addNewToDoItem(add: AddNewViewController, toDo: ToDo) {
+//        self.toDoList.append(toDo)
+        self.toDoList.insert(toDo, at: 0)
+        self.tableView.reloadData()
+    }
 }

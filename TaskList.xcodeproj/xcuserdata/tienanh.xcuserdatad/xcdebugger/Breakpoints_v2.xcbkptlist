@@ -2,4 +2,132 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TaskList/AddNewViewController.swift"
+            timestampString = "496397048.917039"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "AddNewViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TaskList.AddNewViewController.NewItemTxt.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITextField&gt;"
+                  moduleName = "TaskList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tienanh/Desktop/Project%20IOS/TaskList/TaskList/AddNewViewController.swift"
+                  timestampString = "496399183.400429"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "42">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TaskList.AddNewViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; TaskList.AddNewViewController"
+                  moduleName = "TaskList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tienanh/Desktop/Project%20IOS/TaskList/TaskList/AddNewViewController.swift"
+                  timestampString = "496399183.402079"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "188">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TaskList.AddNewViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;TaskList.AddNewViewController&gt;"
+                  moduleName = "TaskList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tienanh/Desktop/Project%20IOS/TaskList/TaskList/AddNewViewController.swift"
+                  timestampString = "496399183.403692"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "115">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TaskList/AddNewViewController.swift"
+            timestampString = "496402096.20585"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "AddNewViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TaskList.AddNewViewController.NewItemTxt.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITextField&gt;"
+                  moduleName = "TaskList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tienanh/Desktop/Project%20IOS/TaskList/TaskList/AddNewViewController.swift"
+                  timestampString = "496402175.219208"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "42">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TaskList.AddNewViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; TaskList.AddNewViewController"
+                  moduleName = "TaskList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tienanh/Desktop/Project%20IOS/TaskList/TaskList/AddNewViewController.swift"
+                  timestampString = "496402175.221271"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "188">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TaskList.AddNewViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;TaskList.AddNewViewController&gt;"
+                  moduleName = "TaskList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tienanh/Desktop/Project%20IOS/TaskList/TaskList/AddNewViewController.swift"
+                  timestampString = "496402175.223086"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "115">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
